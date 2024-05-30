@@ -1,0 +1,185 @@
+/* Estilos generales para el cuerpo del documento */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente de texto */
+    margin: 0; /* Quita los márgenes predeterminados */
+    padding: 0; /* Quita los rellenos predeterminados */
+    background-color: #fff; /* Color de fondo blanco */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #0D665B; /* Color de fondo verde oscuro */
+    padding: 10px 0; /* Relleno superior e inferior */
+    color: white; /* Color del texto blanco */
+}
+
+/* Contenedor del logotipo, centrado horizontalmente */
+.logo {
+    text-align: left;
+}
+
+/* Estilos para la barra de navegación */
+.navbar ul {
+    list-style: none; /* Quita el estilo de lista predeterminado */
+    padding: 0; /* Quita el relleno */
+    display: flex; /* Usa un modelo de caja flexible */
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+/* Estilos para los elementos de la barra de navegación */
+.navbar ul li {
+    margin: 0 15px; /* Espacio entre los elementos de la lista */
+}
+
+/* Estilos para los enlaces de la barra de navegación */
+.navbar ul li a {
+    color: rgb(0, 0, 0); /* Color del texto de los enlaces*/
+    font-weight: bold; /* Texto en negrita */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+/* Cambia el color de fondo del enlace a naranja cuando se pasa el ratón */
+.navbar ul li a:hover {
+    background-color: orange; /* Color de fondo naranja */
+    border-bottom: 1px solid orange; /* Línea de borde inferior */
+}
+
+/* Sección introductoria */
+.intro {
+    text-align: center; /* Texto centrado */
+    padding: 50px 20px; /* Relleno superior e inferior, y lateral */
+
+}
+
+/* Estilo para el título en la sección introductoria */
+.intro h2 {
+    font-size: 50px; /* Tamaño grande de texto */
+}
+
+/* Estilos para el párrafo en la sección introductoria */
+.intro p {
+    max-width: 600px; /* Ancho máximo del párrafo */
+    margin: 0 auto; /* Centra el párrafo horizontalmente */
+    font-size: 18px; /* Tamaño del texto */
+}
+
+/* Contenedor principal para el contenido */
+.content {
+    display: flex; /* Usa un modelo de caja flexible */
+    justify-content: space-between; /* Espacio entre los elementos */
+    padding: 20px; /* Relleno */
+}
+
+/* Estilos para el artículo principal */
+.content article {
+    flex: 2; /* Toma el doble de espacio */
+    padding-right: 20px; /* Relleno a la derecha */
+}
+
+/* Estilo para los títulos de los artículos */
+.content article h3 {
+    font-size: 24px; /* Tamaño del texto */
+    margin-top: 0; /* Quita el margen superior */
+}
+
+/* Estilos para los párrafos del artículo */
+.content article p {
+    font-size: 18px; /* Tamaño del texto */
+    line-height: 1.6; /* Altura de línea */
+}
+
+/* Estilos para el apartado lateral */
+.content aside {
+    flex: 1; /* Toma un espacio */
+    padding-left: 20px; /* Relleno a la izquierda */
+}
+
+/* Estilo para los títulos del apartado lateral */
+.content aside h3 {
+    font-size: 24px; /* Tamaño del texto */
+    margin-top: 0; /* Quita el margen superior */
+}
+
+/* Estilos para la lista de top ventas */
+.content aside ul {
+    list-style: none; /* Quita el estilo de lista predeterminado */
+    padding: 0; /* Quita el relleno */
+}
+
+/* Estilos para los elementos de la lista de top ventas */
+.content aside ul li {
+    background-color: #0D665B; /* Color de fondo verde oscuro */
+    margin: 10px 0; /* Margen vertical */
+    padding: 10px; /* Relleno */
+    text-align: center; /* Texto centrado */
+    font-size: 18px; /* Tamaño del texto */
+    color: white;
+}
+
+/* Estilos para los enlaces en la lista de top ventas */
+.content aside ul li a {
+    color: rgb(4, 0, 0); /* Color del texto */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+.row{
+    width: 100;
+    display: flex;
+}
+.col1{
+    width: 80;
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    /* Estilos para la barra de navegación */
+    .navbar ul {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center; /* Centra los elementos verticalmente */
+    }
+
+    .navbar ul li {
+        margin: 10px 0; /* Espacio entre los elementos de la lista */
+    }
+
+    /* Sección introductoria */
+    .intro {
+        padding: 20px 10px; /* Ajusta el relleno */
+    }
+
+    .intro h2 {
+        font-size: 36px; /* Ajusta el tamaño del texto */
+    }
+
+    .intro p {
+        font-size: 16px; /* Ajusta el tamaño del texto */
+        max-width: 90%; /* Ancho máximo del párrafo */
+    }
+
+    /* Contenedor principal para el contenido */
+    .content {
+        flex-direction: column; /* Dispone los elementos en columna */
+        padding: 10px; /* Ajusta el relleno */
+    }
+
+    .content article {
+        padding-right: 0; /* Quita el relleno a la derecha */
+        margin-bottom: 20px; /* Espacio entre el artículo y el lateral */
+    }
+
+    .content aside {
+        padding-left: 0; /* Quita el relleno a la izquierda */
+    }
+
+    .content article h3, .content aside h3 {
+        font-size: 20px; /* Ajusta el tamaño del texto */
+    }
+
+    .content article p, .content aside ul li {
+        font-size: 16px; /* Ajusta el tamaño del texto */
+    }
+
+    .content aside ul li {
+        padding: 8px; /* Ajusta el relleno */
+    }
+}
