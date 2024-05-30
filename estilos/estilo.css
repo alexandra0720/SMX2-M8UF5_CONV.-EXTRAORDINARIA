@@ -122,13 +122,17 @@ header {
     text-decoration: none; /* Quita el subrayado */
 }
 
-.row{
-    width: 100;
+.row, .row4 {
     display: flex;
+    justify-content: space-around;
 }
-.col1{
-    width: 80;
+
+.col2, .col4 {
+    flex: 1;
+    margin: 2px;
+    text-align: center;
 }
+
 
 /* Media query para pantallas pequeñas */
 @media screen and (max-width: 600px) {
@@ -136,10 +140,12 @@ header {
     .navbar ul {
         flex-direction: column; /* Apila los elementos verticalmente */
         align-items: center; /* Centra los elementos verticalmente */
+        text-align: center;
     }
 
     .navbar ul li {
         margin: 10px 0; /* Espacio entre los elementos de la lista */
+        text-align: center;
     }
 
     /* Sección introductoria */
@@ -181,5 +187,10 @@ header {
 
     .content aside ul li {
         padding: 8px; /* Ajusta el relleno */
+    }
+
+    .col4, .row4 {
+        width: 100%;
+        flex-direction: column;
     }
 }
